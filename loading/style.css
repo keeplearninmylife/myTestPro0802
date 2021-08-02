@@ -35,6 +35,7 @@ body{
     border-top: 10px solid #3498db;
 }
 .loading span{
+    /* span设置float：left/right;或position:absolute;后内部会将display属性变成：inline-block行级块元素 */
     position: absolute;
     width: 200px;
     height: 200px;
