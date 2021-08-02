@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style lang="css/text">
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+        }
+        .PcMan {
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            margin-left: 150px;
+            margin-top: 200px;
+            /* background-color: chocolate; */
+            box-shadow: 400px 0 0 -90px white,
+                        300px 0 0 -90px white,
+                        200px 0 0 -90px white,
+                        100px 0 0 -90px white;
+            animation: pcM 0.5s linear infinite;
+        }
+        .topMouth, .bottomMouth{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        .topMouth{
+            border-radius: 50% 50% 0 0;
+            /* transform: rotate(-30deg); */
+            animation: top .5s linear infinite;
+        }
+        .bottomMouth{
+            border-radius: 0 0 50% 50%;
+            animation: bottom .5s linear infinite;
+            /* transform: rotate(30deg); */
+        }
+        @keyframes top {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(-30deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes bottom {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(30deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes pcM {
+            0%{
+                box-shadow: 400px 0 0 -90px white;
+            }
+            50%{
+                box-shadow: 205px 0 0 -90px white;
+            }
+            100%{
+                box-shadow: -10px 0 0 -90px white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="PcMan">
+        <div class="topMouth"></div>
+        <div class="bottomMouth"></div>
+    </div>
+</body>
+</html>
